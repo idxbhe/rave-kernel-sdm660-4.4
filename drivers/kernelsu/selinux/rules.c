@@ -36,7 +36,7 @@ static struct policydb *get_policydb(void)
 	return db;
 }
 
-void apply_kernelsu_rules()
+void apply_kernelsu_rules(void)
 {
 	if (!getenforce()) {
 		pr_info("SELinux permissive or disabled, apply rules!");

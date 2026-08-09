@@ -187,7 +187,7 @@ static struct kprobe execve_kp = {
 #endif
 
 // sucompat: permited process can execute 'su' to gain root access.
-void ksu_enable_sucompat()
+void ksu_enable_sucompat(void)
 {
 #ifdef CONFIG_KPROBES
 	int ret;

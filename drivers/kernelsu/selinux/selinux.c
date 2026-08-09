@@ -65,7 +65,7 @@ void setenforce(bool enforce)
 #endif
 }
 
-bool getenforce()
+bool getenforce(void)
 {
 #ifdef CONFIG_SECURITY_SELINUX_DISABLE
 #ifdef KSU_COMPAT_USE_SELINUX_STATE
@@ -101,7 +101,7 @@ static inline u32 current_sid(void)
 }
 #endif
 
-bool is_ksu_domain()
+bool is_ksu_domain(void)
 {
 	return ksu_sid && current_sid() == ksu_sid;
 }
